@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Library | Lashes ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Pacifico&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --hot-pink: #ff4d94;
+            --deep-purple: #6c429c;
+            --glass: rgba(255, 255, 255, 0.9);
+            --soft-pink: #ffb6c1;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: var(--deep-purple);
+            padding-bottom: 100px;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-main { font-family: 'Pacifico', cursive; font-size: 1.8rem; color: white; text-shadow: 2px 2px var(--hot-pink); }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: white; font-weight: 700; font-size: 0.9rem; border-radius: 20px; padding: 5px 15px; transition: 0.3s; }
+        nav a:hover { background: white; color: var(--hot-pink); }
+
+        .page-header { text-align: center; padding: 60px 20px; color: white; }
+        .page-header h1 { font-family: 'Comfortaa', cursive; font-size: 3.5rem; text-shadow: 3px 3px var(--deep-purple); }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            padding: 0 8%;
+        }
+
+        .book-card {
+            background: var(--glass);
+            border-radius: 40px;
+            padding: 30px;
+            border: 6px solid white;
+            display: flex;
+            flex-direction: column;
+            transition: 0.4s;
+        }
+
+        .book-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+
+        .book-cover {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .status-badge {
+            background: var(--hot-pink);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        h2 { font-family: 'Comfortaa', cursive; margin-bottom: 15px; font-size: 1.8rem; }
+
+        .blurb-text { line-height: 1.6; font-size: 1rem; margin-bottom: 15px; white-space: pre-line; }
+        .more-content { display: none; }
+        
+        .read-more-btn {
+            background: var(--soft-pink);
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            align-self: flex-start;
+        }
+
+        .links-container {
+            border-top: 2px dashed var(--soft-pink);
+            padding-top: 20px;
+            margin-top: auto;
+        }
+
+        .links-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+        .plat-link {
+            padding: 6px 12px;
+            background: var(--deep-purple);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .plat-link:hover { background: var(--hot-pink); transform: translateY(-2px); }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span class="logo-main">lashes</span>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="works.html">Works</a></li>
+            <li><a href="facts.html">Facts</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>My Published Works</h1>
+        <p>Grab your favorite drink and get lost in these worlds. ✨</p>
+    </header>
+
+    <section class="works-grid">
+
+        <div class="book-card">
+            <img src="assets/bound.jpeg" alt="Bound to the Dragon King" class="book-cover">
+            <span class="status-badge">ONGOING</span>
+            <h2>Bound To The Dragon King</h2>
+            <p class="blurb-text">Everyone bowed when the Immortal King entered the room. I didn’t. That was my first mistake.<span class="more-content">
+***
+In the kingdom of Drakaryth, the Immortal King’s word is law, and his shadow is death. For Kaela, an orphan aged out of the system and sold into slavery for twenty gold coins, the palace was supposed to be her cage for life. But Kaela has never been good at following rules.
+One act of defiance sets off a chain of events she never saw coming. After a daring escape leads her into a forbidden cave, she discovers two things that will change her fate forever: a pulsing golden gemstone and a silver cuff that refuses to leave her wrist.
+Captured and dragged back to the palace, Kaela expects the dungeons and the whip. Instead, King Alanis does something far more dangerous. He brings her into his inner court. Alanis has lived a thousand years, but the moment he sees Kaela, the frozen void in his chest begins to thaw. She feels like home—a feeling he’s forgotten existed. But between a jealous mistress, a court full of vultures, and the dark power thrumming in Kaela's pocket, the King's new slave might be the very thing that burns his empire to the ground.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="https://joylit.hifreefiction.com/book/30109922" class="plat-link">JoyLit</a>
+                    <a href="#" class="plat-link">Readict</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/countertopconfessions.jpeg" alt="Countertop Confessions" class="book-cover">
+            <span class="status-badge">NEW RELEASE</span>
+            <h2>Countertop Confessions</h2>
+            <p class="blurb-text">Noor’s engagement to Daniel is a masterpiece of stability. He’s the perfect man—as long as Noor agrees to leave her career behind and vanish into the role of a quiet wife.<span class="more-content">
+Content to hide her talent, Noor has always kept her songwriting and voice acting safely away from the limelight... until she meets Rhys.
+An animation director nearly twenty years her senior, Rhys doesn't want her to stay in the background. He demands she be heard. Between a fiancé who suffocates her and a lover who dares her to finally claim her own talent, Noor is living a double life that’s about to explode.
+On the eve of a wedding she no longer wants, she has to make a choice: Keep the ring and lose her soul, or follow the music and face the scandal.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="https://joylit.hifreefiction.com/book/30109877" class="plat-link">JoyLit</a>
+                    <a href="#" class="plat-link">Readict</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/TBC.png" alt="The Blood Catalyst" class="book-cover">
+            <span class="status-badge">VAMPIRE MAFIA</span>
+            <h2>The Blood Catalyst</h2>
+            <p class="blurb-text">Vampire speed, a Mafia pureblood and a girl whose life could end them all. High school was never meant to be this deadly.<span class="more-content">
+****
+Ethan Moreau is fast—Olympic fast.
+But his speed isn’t talent, it’s vampirism.
+Born into a brutal mafia of immortal predators, Ethan’s spent years outrunning his legacy. He just wants a normal life without bloodshed, crime and a throne.
+Then there’s Zara Castillo who is the headstrong and suspicious daughter of his track coach. She sees Ethan do the impossible and should forget it ever happened when he compels her to do so, but she can’t. Because she’s not just human.
+Zara’s blood is the key to an ancient Vampire Blood Pact which makes her wanted by all vampire clans. Now, everyone wants Zara. Dead or weaponized.
+And Ethan? He’s linked to her by a bond that means if she dies, he dies.
+The only way out might be becoming the thing he fears most.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="https://m.anystories.app/stories/694ca183577e8a6bfc3616db..." class="plat-link">AnyStories</a>
+                    <a href="https://joylit.hifreefiction.com/book/30108700" class="plat-link">JoyLit</a>
+                    <a href="https://www.inkitt.com/stories/1549560" class="plat-link">Inkitt</a>
+                    <a href="#" class="plat-link">Readict</a>
+                    <a href="https://pub-landing.reelshort.com/kiss/shareBookPage/..." class="plat-link">Myfiction</a>
+                    <a href="#" class="plat-link">Hinovel</a>
+                    <a href="https://www.novelflow.app/bookatalog/blood-catalyst/2" class="plat-link">NovelFlow</a>
+                    <a href="https://api.joyreadings.com/api/share/h5?id=12844..." class="plat-link">JoyReads</a>
+                    <a href="https://api.tapon.com/tapon/book_share?id=13025..." class="plat-link">Tapon</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/themafiasangel.jpg" alt="The Mafia's Angel" class="book-cover">
+            <span class="status-badge">DARK ROMANCE</span>
+            <h2>The Mafia's Angel</h2>
+            <p class="blurb-text">“I want a different kind of meal from you Arya,” Juan teased. “Why don’t you sit on my face and you’ll know.”<span class="more-content">
+*+*++**++*
+Arya was never meant to stand out. With a deceased mother, an abusive father, and only a high school certificate to her name, she lived quietly and worked as a waitress in a bar, but one night she got just one look from Juan Moreno, the most feared mafia lord in Sicily and things went south.
+Sold like property to a man she didn’t know, Arya thought the worst had already happened. Until Juan came for her. He didn’t save her only, he claimed her just to have owner ship of her and then locked her in a prison disguised as a mansion.
+Now, she’s the most wanted woman—not for a crime, but for her beauty. And two ruthless mafia kings are at a cold war for ownership of her body.
+Juan, believes Dominic—his longtime rival who wants Arya is the only threat. But when he faces several attacks from an enemy he once thought was dead, he realizes his empire might fall. 
+Can Juan protect the woman he would burn the world for, or will he be forced to hand her to the only man who might keep her alive?</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="https://www.novelol.com/goodnovel/share?..." class="plat-link">GoodNovel</a>
+                    <a href="https://api.joyreadings.com/api/share/h5?id=11358..." class="plat-link">JoyReads</a>
+                    <a href="https://api.tapon.com/tapon/book_share?id=11175..." class="plat-link">Tapon</a>
+                    <a href="https://enbook.hinovel.com?..." class="plat-link">Hinovel</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/PMF.png" alt="The Perfect Marriage Fraud" class="book-cover">
+            <span class="status-badge">CONTRACT MARRIAGE</span>
+            <h2>The Perfect Marriage Fraud</h2>
+            <p class="blurb-text">After a tragic accident, Camilla's mother is critically ill in the hospital, and the medical bills are piling up. Camilla accepts a contract from Logan Delaware to be his bride.<span class="more-content">
+Unaware that he is the company's CEO for the new job she got and that his father, is her mother's former business partner and sworn enemy.
+When Logan proposes a contract marriage to Camilla in order to secure his inheritance, he is unaware that she will be his new secretary. Since she has signed the contract before she knew about her mother's history with the Delaware's; Camilla decides to use the marriage to get revenge for her mother's past betrayal despite her mother's warnings. 
+As Camilla continues in her marriage with Logan, discovering secrets that might be too dangerous. She is confronted with romantic attractions and must make a decision to either let go of the past and fight for her love or stick to her revenge plan.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="https://api.joyreadings.com/api/share/h5?id=10683..." class="plat-link">JoyRead</a>
+                    <a href="https://api.literiess.com/share?..." class="plat-link">Literie</a>
+                    <a href="https://enbook.hinovel.com?..." class="plat-link">Hinovel</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/TKS.png" alt="The Killers Syndrome" class="book-cover">
+            <span class="status-badge">COMING SOON</span>
+            <h2>The Killers Syndrome</h2>
+            <p class="blurb-text">Belle, a forensic scientist is set to investigate a murder case with limited resources where the victim's face is mutilated beyond measure.<span class="more-content">
+His ID card reveals who he is but surprisingly, his fingerprints and DNA does not match any in the system. 
+When she meets a guy she falls head over heels with, her sanity is questioned when those around her claim he does not exist. 
+Things take a turn when her non existent lover's DNA shows up in the system as the DNA of the murdered man but this might just be the start of a chaos for her as her job position is being threatened with claims of her insanity, a serial killer is on the loose and her life is at stake.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="#" class="plat-link">Wattpad Preview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/apaniyan.png" alt="Apaniyan" class="book-cover">
+            <span class="status-badge">MYSTERY / CULTURE</span>
+            <h2>Apaniyan: Guised As The Gods</h2>
+            <p class="blurb-text">"This land would bleed." Ifagbenusola face was solemn, void of any emotions as he spoke. His wrinkled eyes barely held light in them. "Seven young virgins would die and the reign of Adefarakan would end."<span class="more-content">
+*+*+*+*+*
+How many murders does it take for the people of Gbágùrá to realize the gods are not to blame?
+When the Ifá instructs the people to offer a sacrifice at Mount Elegbede, with a clear warning of the implications if not performed in due time, some people in power do everything to hinder the ritual from taking place. 
+For every full moon, a virgin is found dead at foot of Elegbede mountain. Adedoyin Kehinde Ige, the daughter of Oba Adefarakan discovers that this might not be the work of the gods when her twin sister (Adesewa Taiwo) dies. 
+To expose the killer, she must find a way to decipher between what is murder and what is not.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="#" class="plat-link">Wattpad Preview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/tornapart.png" alt="Torn Apart" class="book-cover">
+            <span class="status-badge">MENTAL HEALTH / DRAMA</span>
+            <h2>Torn Apart</h2>
+            <p class="blurb-text">Not everyone lives to tell their story... Clarisse, Tiaraoluwa, and Kainyechukwuekene are three souls desperate for connection in a world that wants to break them.<span class="more-content">
+After the tragic death of her billionaire father and beloved brother, her mother's inability to cope forces Clarisse to live with an abusive aunt. Desperate to ignore the ghosts from her past she shuts the door to the world.
+Tiaraoluwa is cold and heartless. She does her best to keep people at a distance however, she is desperate for someone to know her. She buries herself in sex and drugs in a bid to satisfy the insatiable. 
+Kainyechukwuekene has been struggling with self harm for as long as he can remember. He lives with parents who cannot coexist peacefully. Dealing with the death of an autistic younger sister, he's forced to lose relationships with people he cares for deeply. 
+In an environment where such issues are a taboo, the three struggle laying down their hardships on the table of friendship. They must realize they only have each other.
+TW; Sensitive topics such as mental health disorders, suicide, self harm, eating disorders, and abuse.</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="#" class="plat-link">Wattpad Preview</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="book-card">
+            <img src="assets/TDT.jpg" alt="The Desperate Things We Do" class="book-cover">
+            <span class="status-badge">THRILLER</span>
+            <h2>The Desperate Things We Do</h2>
+            <p class="blurb-text">Secrets kill. Desperation destroys. This collection of four bone-chilling thrillers proves that anyone can become a monster when their back is against the wall.<span class="more-content">
+A collection of four stories. Dive into a world where every choice is life or death and no one is who they seem to be. Are you ready to face the truth?</span></p>
+            <button class="read-more-btn" onclick="toggleText(this)">Read full blurb ➔</button>
+            <div class="links-container">
+                <div class="links-grid">
+                    <a href="https://selar.com/i66975" class="plat-link">Buy on Selar</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+        function toggleText(btn) {
+            var moreText = btn.previousElementSibling.querySelector(".more-content");
+            if (moreText.style.display === "inline") {
+                moreText.style.display = "none";
+                btn.innerHTML = "Read full blurb ➔";
+            } else {
+                moreText.style.display = "inline";
+                btn.innerHTML = "Read less";
+            }
+        }
+    </script>
+
+</body>
+</html>
