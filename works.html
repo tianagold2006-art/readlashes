@@ -13,15 +13,24 @@
             --glass: rgba(255, 255, 255, 0.9);
             --soft-pink: #ffb6c1;
         }
-
-        body {
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Sparkle cursor! */
+            cursor: url('https://cdn-icons-png.flaticon.com/32/1144/1144760.png'), auto; 
+        }
+       body {
             font-family: 'Quicksand', sans-serif;
             background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
             background-size: 400% 400%;
+            background-attachment: fixed; /* ✨ THIS FIXES THE ANIMATION! ✨ */
             animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
             color: var(--deep-purple);
             padding-bottom: 100px;
         }
+        
 
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
@@ -29,6 +38,7 @@
             100% { background-position: 0% 50%; }
         }
 
+       /* Navigation */
         nav {
             display: flex;
             justify-content: space-between;
@@ -39,42 +49,55 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3); /* The glass line */
         }
 
         .logo-area {
-    display: flex;
-    flex-direction: column;
-}
+            display: flex;
+            flex-direction: column;
+        }
 
-.logo-main {
-    font-family: 'Pacifico', cursive;
-    font-size: 2.2rem;
-    color: white;
-    text-shadow: 2px 2px var(--hot-pink);
-}
+        .logo-main {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            color: white;
+            text-shadow: 2px 2px var(--hot-pink);
+        }
 
-.logo-sub {
-    font-size: 0.8rem;
-    color: white;
-    letter-spacing: 2px;
-    font-weight: bold;
-}
-       nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-}
+        .logo-sub {
+            font-size: 0.8rem;
+            color: white;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
 
-nav a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: 0.3s;
-    padding: 8px 12px;
-    border-radius: 20px;
-}
-        nav a:hover { background: white; color: var(--hot-pink); }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none !important; /* Force no underline */
+            color: white !important;         /* Force white text */
+            font-weight: 700;
+            font-size: 1rem;
+            transition: 0.3s;
+            padding: 8px 12px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* THE PINK FIX */
+        nav a:hover {
+            background: white !important;
+            color: var(--hot-pink) !important; /* Forces the pink color */
+            transform: translateY(-3px);
+        }
 
         .page-header { text-align: center; padding: 60px 20px; color: white; }
         .page-header h1 { font-family: 'Comfortaa', cursive; font-size: 3.5rem; text-shadow: 3px 3px var(--deep-purple); }
